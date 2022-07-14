@@ -27,15 +27,16 @@ body{
     text-transform: capitalize;
     color: navy;
 }
-.question{
+.faq-container .question{
     text-transform: capitalize;
     font-size: 18px;
+    cursor: pointer;
     font-weight: 700;
-    /* margin-top: 12px; */
     padding: 12px 0px;
     border-bottom: solid 1px rgb(216, 206, 206);
     position: relative;
     margin-bottom: 12px;
+    transition: all .8s ease;
 }
 .question::after{
     content: "+";
@@ -46,19 +47,17 @@ body{
 .answer{
     height: 0px;
     overflow: hidden;
+    transition: all .8s ease;
 }
 .active .question{
     font-size: 14px;
-    transition: .4s;
 }
 
 .active .question::after{
     content: "-";
-    transition: .5s ease-in-out;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .active .answer{
-    height: fit-content;
-    transition: .5s;
+    height: 100px;
 }
